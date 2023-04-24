@@ -6,7 +6,8 @@ import java.sql.ResultSet;
 public class alltask {
     public static String getTaskList() {
         try {
-            String output = "<center>\n<table class=\" shadow-lg table table-striped table-hover \" border='1'>\n";
+            String output = 
+                    "<center>\n<table class=\" shadow-lg table table-striped table-hover \" border='1'>\n";
             output += "<tr><th>SNo </th><th>Task </th><th>Description </th><th>Status </th><th>Date </th><th>Delete </th><th>Update </th></tr>\n";
             PreparedStatement ps = DbConnect.connect().prepareStatement("select * from todo order by serialno");
                         ResultSet rs = ps.executeQuery();
